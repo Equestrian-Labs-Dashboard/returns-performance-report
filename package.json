@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check assets/js/dataService.js && node --check assets/js/returns.js && node --check scripts/sync-shopify-returns.mjs",
+    "check": "node --check assets/js/dataService.js && node --check assets/js/returns.js && node --check assets/js/app.js && node --check scripts/sync-shopify-returns.mjs && node --check scripts/sync-shopify-actuals.mjs && node --check scripts/sync-smartrr-cavali.mjs && node --check scripts/sync-connected-data.mjs",
     "sync:returns": "node scripts/sync-shopify-returns.mjs"
   }
 }

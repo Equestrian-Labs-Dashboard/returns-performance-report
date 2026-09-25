@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,25 +7,32 @@
   <link rel="stylesheet" href="assets/css/styles.css?v=451" />
 </head>
 <body>
-<header class="topbar">
-  <div class="topbar-inner">
-    <div class="brand">
-      <small>EQUESTRIAN LABS</small>
-      <h1>Returns Report <span class="version">v1.0</span></h1>
-      <div>Return rate, returned units, product ranking and reasons</div>
-    </div>
-    <div class="actions">
-      <button id="themeBtn" aria-label="Toggle theme">☀</button>
-    </div>
+<aside class="sidebar">
+  <div class="window-dots"><span></span><span></span></div>
+  <img class="brand-logo" src="assets/corro_logo.png" alt="Corro" />
+  <div class="sidebar-title">
+    <strong>Equestrian Labs, Inc.</strong>
+    <span>Performance Dashboard</span>
   </div>
-</header>
+  <div class="side-section">Returns</div>
+  <nav class="side-nav">
+    <a class="active" href="index.html">Returns Report</a>
+  </nav>
+  <div class="side-section">Brands</div>
+  <div class="brand-chip"><span></span>Corro</div>
+  <div class="brand-chip purple"><span></span>Cavali</div>
+</aside>
 
 <main class="report-shell">
+  <div class="top-actions">
+    <span class="live-pill">● Live</span>
+    <button id="themeBtn" aria-label="Toggle theme">☾</button>
+  </div>
   <section class="report-header">
     <div>
       <span class="pill" id="sourceStatus">Actuals loading...</span>
       <h1>Returns Performance</h1>
-      <p>Client-facing view of returns by period, category, vendor, product and reason.</p>
+      <p>Shopify returns · Corro + Cavali · product ranking and reasons</p>
     </div>
     <div class="report-controls">
       <label>Period
