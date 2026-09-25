@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check assets/js/dataService.js && node --check assets/js/returns.js"
+    "check": "node --check assets/js/dataService.js && node --check assets/js/returns.js && node --check scripts/sync-shopify-returns.mjs",
+    "sync:returns": "node scripts/sync-shopify-returns.mjs"
   }
 }
