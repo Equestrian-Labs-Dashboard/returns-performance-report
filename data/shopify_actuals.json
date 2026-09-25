@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T09:34:26.894Z",
+  "generated_at": "2026-09-25T15:21:53.159Z",
   "source": "shopify_admin_api_returns",
   "api_version": "2026-01",
   "brands": {
@@ -79,11 +79,11 @@
         },
         {
           "period": "2026-09",
-          "gross_sales": 43197.63999999999,
-          "nb_units": 857,
-          "total_returns": 2737.7799999999997,
-          "returned_units": 34,
-          "nb_orders": 319
+          "gross_sales": 43579.01999999998,
+          "nb_units": 867,
+          "total_returns": 2836.7799999999997,
+          "returned_units": 35,
+          "nb_orders": 321
         }
       ],
       "returns_detail": [
@@ -2198,6 +2198,18 @@
           "gross_sale": 99.99,
           "reason": "Order canceled",
           "order_name": "151423"
+        },
+        {
+          "period": "2026-09",
+          "brand": "Corro",
+          "sku": "20339002",
+          "product_name": "Back on Track Royal Deluxe Quick Wraps",
+          "vendor": "Back on Track",
+          "category": "No Category Provided",
+          "quantity": 1,
+          "gross_sale": 99,
+          "reason": "cancel",
+          "order_name": "154769"
         },
         {
           "period": "2026-07",
