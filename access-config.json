@@ -1,0 +1,15 @@
+{
+  "report": "Returns Report",
+  "permission": "Returns Report",
+  "permissions": [
+    "returns_report",
+    "Returns Report"
+  ],
+  "aliases": [
+    "Returns",
+    "Return Report",
+    "Returns Dashboard",
+    "Shopify Returns"
+  ],
+  "portal": "https://equestrian-labs-dashboard.pages.dev"
+}

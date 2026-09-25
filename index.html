@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Equestrian Labs — Returns Report</title>
+  <link rel="stylesheet" href="assets/css/styles.css?v=451" />
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <small>EQUESTRIAN LABS</small>
+      <h1>Returns Report <span class="version">v1.0</span></h1>
+      <div>Return rate, returned units, product ranking and reasons</div>
+    </div>
+    <div class="actions">
+      <button id="themeBtn" aria-label="Toggle theme">☀</button>
+    </div>
+  </div>
+</header>
+
+<main class="report-shell">
+  <section class="report-header">
+    <div>
+      <span class="pill" id="sourceStatus">Actuals loading...</span>
+      <h1>Returns Performance</h1>
+      <p>Client-facing view of returns by period, category, vendor, product and reason.</p>
+    </div>
+    <div class="report-controls">
+      <label>Period
+        <select id="periodMode">
+          <option value="ytd">YTD</option>
+          <option value="q3">Q3</option>
+          <option value="monthly">Monthly</option>
+          <option value="custom">Custom</option>
+        </select>
+      </label>
+      <label>Month
+        <select id="monthSelect"></select>
+      </label>
+      <label>Start
+        <input id="startMonth" type="month" value="2026-01" />
+      </label>
+      <label>End
+        <input id="endMonth" type="month" value="2026-09" />
+      </label>
+      <label>Ranking
+        <select id="rankLimit">
+          <option value="auto">Auto</option>
+          <option value="10">Top 10</option>
+          <option value="20">Top 20</option>
+          <option value="50">Top 50</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title accent-green">KPI Summary</div>
+    <div class="kpis" id="kpiSummary"></div>
+  </section>
+
+  <section class="return-layout">
+    <div class="section">
+      <div class="section-title accent-yellow">Top Returned Products</div>
+      <div id="productTable"></div>
+    </div>
+    <div>
+      <section class="section">
+        <div class="section-title accent-purple">Returns by Category</div>
+        <div class="card" id="categoryBars"></div>
+      </section>
+      <section class="section">
+        <div class="section-title accent-orange">Returns by Vendor</div>
+        <div class="card" id="vendorBars"></div>
+      </section>
+      <section class="section">
+        <div class="section-title">Return Reasons</div>
+        <div class="card" id="reasonBars"></div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/dataService.js?v=451"></script>
+<script src="assets/js/returns.js?v=451"></script>
+</body>
+</html>

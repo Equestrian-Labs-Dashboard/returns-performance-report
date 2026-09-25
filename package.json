@@ -1,0 +1,9 @@
+{
+  "name": "equestrian-labs-returns-report",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check assets/js/dataService.js && node --check assets/js/returns.js"
+  }
+}
