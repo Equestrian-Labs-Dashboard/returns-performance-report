@@ -1,0 +1,43 @@
+name: Sync Returns Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 10 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-returns
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Sync Shopify returns
+        env:
+          SHOPIFY_API_VERSION: ${{ secrets.SHOPIFY_API_VERSION }}
+          CORRO_SHOPIFY_STORE: ${{ secrets.CORRO_SHOPIFY_STORE }}
+          CORRO_SHOPIFY_TOKEN: ${{ secrets.CORRO_SHOPIFY_TOKEN }}
+          CAVALI_SHOPIFY_STORE: ${{ secrets.CAVALI_SHOPIFY_STORE }}
+          CAVALI_SHOPIFY_TOKEN: ${{ secrets.CAVALI_SHOPIFY_TOKEN }}
+        run: node scripts/sync-shopify-returns.mjs
+
+      - name: Validate JavaScript
+        run: npm run check
+
+      - name: Commit refreshed returns data
+        run: |
+          git config user.name "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git add data/shopify_actuals.json
+          git diff --cached --quiet || git commit -m "Refresh returns data"
+          git push || true
